@@ -5,6 +5,7 @@ html, body {
     width: 100vw;
     height: 100%;
     overflow-x: hidden; 
+    font-family: 'jost', sans-serif;
 }
 
 * {
@@ -32,18 +33,34 @@ html, body {
     height: 100vh;
 }
 
+#title_learning {
+    margin-top: -300px;
+}
 
-h1, h2 {
-    font-size: 3rem;
+
+
+
+h1 {
+    font-size: 40px;
     text-transform: uppercase;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
+
+.content {
+font-size: 18px;
+text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    align-items: flex-start;
+    margin-left: -1000px;
+    margin-top: 50px;
+}
+
 
 
 a {
     text-decoration: none;
     color: white;
-    font-size: 2rem;
+    font-size: 30px;
     transition: color 0.3s ease;
     cursor: pointer;
 }
@@ -56,6 +73,7 @@ a:hover {
 .menu {
     display: flex;
     gap: 20px;
+    font-size: 30px;
 }
 
 
