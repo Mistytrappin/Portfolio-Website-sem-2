@@ -1,0 +1,78 @@
+/* Reset domyślnych styli i eliminacja marginesów */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden; /* Zapobiega poziomemu przewijaniu */
+}
+
+/* Sprawdzamy, czy coś wystaje poza ekran */
+* {
+    box-sizing: border-box;
+    max-width: 100vw;
+}
+
+/* Kontener główny */
+.container {
+    display: grid;
+    grid-template-rows: repeat(4, 100vh); /* 4 sekcje, każda na pełny ekran */
+    width: 100vw; /* Pełna szerokość */
+    height: 100%;
+}
+
+/* Sekcje */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('background2.jpg') center/cover no-repeat;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Styl nagłówków */
+h1, h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Linki */
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+a:hover {
+    color: lightgray;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* Grid dla Learning Outcomes i Projects */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    width: 100%; /* Nie pozwala siatce się rozszerzać */
+}
+
+.grid a {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.grid a:hover {
+    transform: scale(1.1);
+}
