@@ -16,21 +16,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   
-    // Paralaksa
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-  
-      document.querySelectorAll(".back").forEach(el => {
-        el.style.transform = `translateY(${scrollY * 0.1}px)`;
-      });
-  
-      document.querySelectorAll(".middle").forEach(el => {
-        el.style.transform = `translateY(${scrollY * 0.3}px)`;
-      });
-  
-      document.querySelectorAll(".front").forEach(el => {
-        el.style.transform = `translateY(${scrollY * 0.6}px)`;
-      });
-    });
-  });
-  
+   
