@@ -15,23 +15,19 @@ html, body {
 
 
 .container {
-    display: grid;
-    grid-template-rows: repeat(4, 100vh);
+    display: flex;
+    flex-direction: column;
     width: 100vw;
-    height: 100%;
 }
 
 
+
 .section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: url('background2.jpg') center/cover no-repeat;
     color: white;
     width: 100vw;
     height: 100vh;
 }
+
 
 .title_learning {
     margin-top: -300px;
@@ -55,14 +51,21 @@ h1 {
 
 
 .content {
-font-size: 18px;
-text-transform: uppercase;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    align-items: flex-start;
-    margin-left: -1000px;
-    margin-top: 50px;
-}
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+  
 
 
 a {
@@ -119,3 +122,37 @@ a:hover {
     font-size: 18px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
+
+.parallax-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+    will-change: transform;
+    overflow: hidden;
+  }
+  
+  .layer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  
